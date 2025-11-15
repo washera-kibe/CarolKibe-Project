@@ -83,7 +83,7 @@ const Sections = () => {
 
         <button
           onClick={nextPage}
-          className="text-2xl px-4 py-1 hover:text-black text-gray-500"
+          className="text-2xl px-4 py-2 hover:text-black text-gray-500"
         >
           →
         </button>
