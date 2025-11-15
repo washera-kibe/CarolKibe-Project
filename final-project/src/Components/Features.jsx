@@ -2,7 +2,7 @@ import React from "react";
 
 const Features = () => {
   return (
-    <section className="relative bg-gradient-to-b from-transparent via-white to-gray-100 py-20 px-6">
+    <section className="relative bg-gray-100 py-5 px-6">
       <div className="max-w-6xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center gap-12">
 
         {/* Content */}

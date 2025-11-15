@@ -1,6 +1,6 @@
+
 // src/components/ProductsSection.js
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 
 const Sections = () => {
   const products = [
@@ -14,33 +14,40 @@ const Sections = () => {
     { id: 8, name: "Water Color", price: 658, imgSrc: "/src/assets/Water colors.jpg" },
   ];
 
+  // KEEP slider UI (arrows + dots) but products stay fully visible
+  const totalPages = 3; 
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const nextPage = () => {
+    if (currentPage < totalPages - 1) setCurrentPage(currentPage + 1);
+  };
+
+  const prevPage = () => {
+    if (currentPage > 0) setCurrentPage(currentPage - 1);
+  };
+
   const handleAddToCart = (product) => {
     console.log("Added to cart:", product);
-    // later connect to context or localStorage
   };
 
   return (
-    <div id="products" className="container mx-auto py-16">
+    <div id="products" className="container bg-gray-100 mx-auto py-5">
       <h2 className="text-center text-3xl font-bold">Our Products</h2>
 
+      {/* SHOW ALL 8 PRODUCTS */}
       <div className="grid grid-cols-4 gap-8 mt-10">
         {products.map((product) => (
           <div key={product.id} className="text-center">
-
-            {/* Image container to position + button */}
             <div className="relative">
               <img
                 src={product.imgSrc}
                 alt={product.name}
                 className="rounded-lg w-full h-48 object-cover"
               />
-
-              {/* + Button bottom-left */}
               <button
                 onClick={() => handleAddToCart(product)}
-                className="absolute bottom-2 right-2 bg-cyan-500 hover:bg-cyan-600 text-white
-                           w-10 h-10 rounded-full flex items-center justify-center text-xl
-                           shadow-lg"
+                className="absolute bottom-2 right-2 bg-red-500 hover:bg-red-600 text-white
+                           w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-lg"
               >
                 +
               </button>
@@ -48,9 +55,39 @@ const Sections = () => {
 
             <h3 className="text-xl font-semibold mt-4">{product.name}</h3>
             <p className="text-lg text-gray-700">KES {product.price}</p>
-
           </div>
         ))}
+      </div>
+
+      {/* BOTTOM BUTTONS (ARROWS + DOTS) */}
+      <div className="flex justify-center items-center gap-6 mt-12">
+
+        <button
+          onClick={prevPage}
+          className="text-2xl px-4 py-1 hover:text-black text-gray-500"
+        >
+          ←
+        </button>
+
+        <div className="flex gap-3">
+          {[...Array(totalPages)].map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentPage(i)}
+              className={`w-3 h-3 rounded-full ${
+                currentPage === i ? "bg-black" : "bg-gray-400"
+              }`}
+            ></button>
+          ))}
+        </div>
+
+        <button
+          onClick={nextPage}
+          className="text-2xl px-4 py-1 hover:text-black text-gray-500"
+        >
+          →
+        </button>
+
       </div>
     </div>
   );

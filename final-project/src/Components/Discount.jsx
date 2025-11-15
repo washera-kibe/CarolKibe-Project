@@ -2,7 +2,7 @@ import React from "react";
 
 const Discount = () => {
   return (
-    <section className="bg-stone-400 flex flex-col md:flex-row items-center justify-center md:justify-between px-6 md:px-16 py-16 text-white h-100">
+    <section className="bg-stone-400 flex flex-col md:flex-row items-center justify-center md:justify-between px-6 md:px-16 py-3 text-white h-100">
       {/* Left Image */}
       <div className="flex justify-center md:w-1/2 mb-10 md:mb-0">
         <img
