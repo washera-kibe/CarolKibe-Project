@@ -4,15 +4,31 @@ import React, { useState } from "react";
 
 const Sections = () => {
   const products = [
-    { id: 1, name: "Acrylic Paint", price: 1363, imgSrc: "/src/assets/Acrylic.jpg" },
-    { id: 2, name: "Brushes", price: 709, imgSrc: "/src/assets/Water brushes.jpg" },
-    { id: 3, name: "Drawing Book", price: 1094, imgSrc: "/src/assets/Drawing book.jpg" },
-    { id: 4, name: "Canvas", price: 1503, imgSrc: "/src/assets/Canvas 2.jpg" },
-    { id: 5, name: "Marker Pen", price: 746, imgSrc: "/src/assets/Marker.jpg" },
-    { id: 6, name: "Tool Set", price: 1636, imgSrc: "/src/assets/Tools.jpg" },
-    { id: 7, name: "Crayons", price: 450, imgSrc: "/src/assets/Crayons 3.jpg" },
-    { id: 8, name: "Water Color", price: 658, imgSrc: "/src/assets/Water colors.jpg" },
-  ];
+  { id: 1, name: "Acrylic Paint", price: 1363,
+    imgSrc: new URL('../assets/acrylic.jpg', import.meta.url).href },
+
+  { id: 2, name: "Brushes", price: 709,
+    imgSrc: new URL('../assets/waterbrushes.jpg', import.meta.url).href },
+
+  { id: 3, name: "Drawing Book", price: 1094,
+    imgSrc: new URL('../assets/drawingbook.jpg', import.meta.url).href },
+
+  { id: 4, name: "Canvas", price: 1503,
+    imgSrc: new URL('../assets/canvas2.jpg', import.meta.url).href },
+
+  { id: 5, name: "Marker Pen", price: 746,
+    imgSrc: new URL('../assets/marker.jpg', import.meta.url).href },
+
+  { id: 6, name: "Tool Set", price: 1636,
+    imgSrc: new URL('../assets/tools.jpg', import.meta.url).href },
+
+  { id: 7, name: "Crayons", price: 450,
+    imgSrc: new URL('../assets/crayons3.jpg', import.meta.url).href },
+
+  { id: 8, name: "Water Color", price: 658,
+    imgSrc: new URL('../assets/watercolors.jpg', import.meta.url).href },
+];
+
 
   // KEEP slider UI (arrows + dots) but products stay fully visible
   const totalPages = 3; 
