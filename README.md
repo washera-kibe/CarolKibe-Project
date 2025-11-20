@@ -1,6 +1,5 @@
 # AllThingsCraft — Craft & DIY Supplies Website
-Live Demo
-Here is my deployed link here
+Here is my deployed link: https://final-project-c4a0v23z3-washerakibe-2257s-projects.vercel.app/
 
 # Project Overview
 AllThingsCraft is a modern, responsive React-based web platform dedicated to showcasing and selling craft and DIY supplies.
@@ -10,8 +9,8 @@ The website focuses on:
 ## 3. Fast and interactive user experience
 ## 4. Clear navigation with a premium, creative feel
 ## 5. The design is inspired by studio workspaces, watercolor palettes, brushes, and wood textures — emphasizing creativity and craftsmanship.
-
 ## Brand Identity
+
 # Color Pallet
 Color Purpose	Value	Usage
 Primary	#06B6D4 (Cyan 500)	Buttons, brand highlights, call-to-actions
