@@ -1,12 +1,16 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import sewingImg from "../assets/sewing.jpg";
+import yarnsImg from "../assets/yarns.jpg";
+import potteryImg from "../assets/pottery.jpg";
+import drawingbookImg from "../assets/drawingbook.jpg";
 
 const NewServices = () => {
   const services = [
-    { title: "Sewing Kit", image: "/src/assets/sewing.jpg" },
-    { title: "Yarns & Crochets", image: "/src/assets/yarns.jpg" },
-    { title: "Pottery Art", image: "/src/assets/pottery.jpg" },
-    { title: "Coloring Books", image: "/src/assets/drawingbook.jpg" },
+    { title: "Sewing Kit", image: sewingImg },
+    { title: "Yarns & Crochets", image: yarnsImg },
+    { title: "Pottery Art", image: potteryImg },
+    { title: "Coloring Books", image: drawingbookImg },
   ];
 
   // Duplicate list for seamless looping
@@ -58,7 +62,7 @@ const NewServices = () => {
 
       </div>
 
-      {/* 🔥 Add scrolling animation */}
+      {/*Scrolling Animation */}
       <style>
         {`
           .animate-scroll {

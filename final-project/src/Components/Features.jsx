@@ -1,4 +1,5 @@
 import React from "react";
+import stationaryImg from "../assets/stationary.jpg";
 
 const Features = () => {
   return (
@@ -11,25 +12,21 @@ const Features = () => {
             Get to know <br /> your supplies better!
           </h2>
           <p className="text-gray-600 mt-4 mb-8 max-w-md">
-            Say hello to our brand-new, sustainable product range! 
-            From biodegradable glues to eco-friendly paints, we care about 
-            the planet as much as we care about creativity. 
-
+            Say hello to our brand-new, sustainable product range!
+            From biodegradable glues to eco-friendly paints, we care about
+            the planet as much as we care about creativity.
           </p>
-
-            
         </div>
 
-         {/* Image */}
+        {/* Image */}
         <div className="flex-1">
           <img
-            src="/src/assets/stationary.jpg"
+            src={stationaryImg}
             alt="Paint Brushes"
             className="rounded-xl shadow-lg"
           />
         </div>
 
-        
       </div>
     </section>
   );
