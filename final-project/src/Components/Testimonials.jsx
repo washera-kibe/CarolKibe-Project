@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import profileImg from "../assets/Marker.jpg"; // replace with your local image path
-import roomImg from "../assets/Brush.jpg"; // replace with your local image path
+import profileImg from "../assets/vintage.jpg"; 
+import roomImg from "../assets/topview.jpg"; 
 
 const Testimonials = () => {
   return (

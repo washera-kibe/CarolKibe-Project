@@ -1,36 +1,29 @@
-
 // src/components/ProductsSection.js
 import React, { useState } from "react";
 
+// IMPORT ALL IMAGES DIRECTLY
+import acrylicImg from "../assets/acrylic.jpg";
+import brushesImg from "../assets/waterbrushes.jpg";
+import drawingbookImg from "../assets/drawingbook.jpg";
+import canvasImg from "../assets/canvas2.jpg";
+import markerImg from "../assets/marker.jpg";
+import toolsImg from "../assets/tools.jpg";
+import crayonsImg from "../assets/crayons3.jpg";
+import watercolorImg from "../assets/watercolors.jpg";
+
 const Sections = () => {
+
   const products = [
-  { id: 1, name: "Acrylic Paint", price: 1363,
-    imgSrc: new URL('../assets/acrylic.jpg', import.meta.url).href },
+    { id: 1, name: "Acrylic Paint", price: 1363, imgSrc: acrylicImg },
+    { id: 2, name: "Brushes", price: 709, imgSrc: brushesImg },
+    { id: 3, name: "Drawing Book", price: 1094, imgSrc: drawingbookImg },
+    { id: 4, name: "Canvas", price: 1503, imgSrc: canvasImg },
+    { id: 5, name: "Marker Pen", price: 746, imgSrc: markerImg },
+    { id: 6, name: "Tool Set", price: 1636, imgSrc: toolsImg },
+    { id: 7, name: "Crayons", price: 450, imgSrc: crayonsImg },
+    { id: 8, name: "Water Color", price: 658, imgSrc: watercolorImg },
+  ];
 
-  { id: 2, name: "Brushes", price: 709,
-    imgSrc: new URL('../assets/waterbrushes.jpg', import.meta.url).href },
-
-  { id: 3, name: "Drawing Book", price: 1094,
-    imgSrc: new URL('../assets/drawingbook.jpg', import.meta.url).href },
-
-  { id: 4, name: "Canvas", price: 1503,
-    imgSrc: new URL('../assets/canvas2.jpg', import.meta.url).href },
-
-  { id: 5, name: "Marker Pen", price: 746,
-    imgSrc: new URL('../assets/marker.jpg', import.meta.url).href },
-
-  { id: 6, name: "Tool Set", price: 1636,
-    imgSrc: new URL('../assets/tools.jpg', import.meta.url).href },
-
-  { id: 7, name: "Crayons", price: 450,
-    imgSrc: new URL('../assets/crayons3.jpg', import.meta.url).href },
-
-  { id: 8, name: "Water Color", price: 658,
-    imgSrc: new URL('../assets/watercolors.jpg', import.meta.url).href },
-];
-
-
-  // KEEP slider UI (arrows + dots) but products stay fully visible
   const totalPages = 3; 
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -50,7 +43,6 @@ const Sections = () => {
     <div id="products" className="container bg-gray-100 mx-auto py-5">
       <h2 className="text-center text-3xl font-bold">Our Products</h2>
 
-      {/* SHOW ALL 8 PRODUCTS */}
       <div className="grid grid-cols-4 gap-8 mt-10">
         {products.map((product) => (
           <div key={product.id} className="text-center">
@@ -60,6 +52,7 @@ const Sections = () => {
                 alt={product.name}
                 className="rounded-lg w-full h-48 object-cover"
               />
+
               <button
                 onClick={() => handleAddToCart(product)}
                 className="absolute bottom-2 right-2 bg-red-500 hover:bg-red-600 text-white
@@ -75,7 +68,6 @@ const Sections = () => {
         ))}
       </div>
 
-      {/* BOTTOM BUTTONS (ARROWS + DOTS) */}
       <div className="flex justify-center items-center gap-6 mt-12">
 
         <button

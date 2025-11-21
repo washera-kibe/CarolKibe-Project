@@ -23,8 +23,8 @@ const Features = () => {
          {/* Image */}
         <div className="flex-1">
           <img
-            src="/src/assets/Paint brushes.jpg"
-            alt="IT Solutions"
+            src="/src/assets/stationary.jpg"
+            alt="Paint Brushes"
             className="rounded-xl shadow-lg"
           />
         </div>

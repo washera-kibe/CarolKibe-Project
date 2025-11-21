@@ -3,10 +3,10 @@ import { ArrowRight } from "lucide-react";
 
 const NewServices = () => {
   const services = [
-    { title: "Sewing Kit", image: "/src/assets/Sewing.jpg" },
-    { title: "Yarns & Crochets", image: "/src/assets/Yarns.jpg" },
-    { title: "Pottery Art", image: "/src/assets/Pottery.jpg" },
-    { title: "Coloring Books", image: "/src/assets/Drawing Book.jpg" },
+    { title: "Sewing Kit", image: "/src/assets/sewing.jpg" },
+    { title: "Yarns & Crochets", image: "/src/assets/yarns.jpg" },
+    { title: "Pottery Art", image: "/src/assets/pottery.jpg" },
+    { title: "Coloring Books", image: "/src/assets/drawingbook.jpg" },
   ];
 
   // Duplicate list for seamless looping

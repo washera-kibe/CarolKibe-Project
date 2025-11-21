@@ -6,8 +6,8 @@ const Discount = () => {
       {/* Left Image */}
       <div className="flex justify-center md:w-1/2 mb-10 md:mb-0">
         <img
-          src="/src/assets/Water brushes.jpg"
-          alt="Tech Offer"
+          src="/src/assets/waterbrushes.jpg"
+          alt="Art Offers"
           className="w-80 md:w-96 rounded-lg shadow-lg h-100 object-cover"
         />
       </div>

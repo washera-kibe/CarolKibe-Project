@@ -32,7 +32,6 @@ const About = () => {
                 <p className="text-gray-600 text-sm">
                    From paints, brushes, and easels to paper crafts, 
                    knitting supplies, and beads, we’ve curated tools and materials for every art and craft enthusiast.
-
                 </p>
               </div>
             </li>
@@ -71,7 +70,6 @@ const About = () => {
             </li>
           </ul>
        </div>
-
     </div>
     </section>
   );
